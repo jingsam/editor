@@ -1,5 +1,5 @@
 import React from 'react'
-import GlSpec from 'mapbox-gl-style-spec/reference/latest.js'
+import GlSpec from '../../config/v8.json'
 import InputBlock from '../inputs/InputBlock'
 import StringInput from '../inputs/StringInput'
 import NumberInput from '../inputs/NumberInput'
@@ -11,7 +11,7 @@ class TileJSONSourceEditor extends React.Component {
   }
 
   render() {
-    return <InputBlock label={"TileJSON URL"} doc={GlSpec.source_tile.url.doc}>
+    return <InputBlock label={"TileJSON"} doc={GlSpec.source_tile.url.doc}>
       <StringInput
         value={this.props.source.url}
         onChange={url => this.props.onChange({
@@ -54,7 +54,7 @@ class TileURLSourceEditor extends React.Component {
   render() {
     return <div>
       {this.renderTileUrls()}
-      <InputBlock label={"Min Zoom"} doc={GlSpec.source_tile.minzoom.doc}>
+      <InputBlock label={"最小缩放级别"} doc={GlSpec.source_tile.minzoom.doc}>
         <NumberInput
           value={this.props.source.minzoom || 0}
           onChange={minzoom => this.props.onChange({
@@ -63,7 +63,7 @@ class TileURLSourceEditor extends React.Component {
           })}
         />
       </InputBlock>
-      <InputBlock label={"Max Zoom"} doc={GlSpec.source_tile.maxzoom.doc}>
+      <InputBlock label={"最大缩放级别"} doc={GlSpec.source_tile.maxzoom.doc}>
         <NumberInput
           value={this.props.source.maxzoom || 22}
           onChange={maxzoom => this.props.onChange({
@@ -84,7 +84,7 @@ class GeoJSONSourceEditor extends React.Component {
   }
 
   render() {
-    return <InputBlock label={"GeoJSON Data"} doc={GlSpec.source_geojson.data.doc}>
+    return <InputBlock label={"GeoJSON"} doc={GlSpec.source_geojson.data.doc}>
       <StringInput
         value={this.props.source.data}
         onChange={data => this.props.onChange({

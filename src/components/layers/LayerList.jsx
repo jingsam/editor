@@ -100,8 +100,11 @@ class LayerListContainer extends React.Component {
       const previousLayer = this.props.layers[i-1]
       const layer = this.props.layers[i]
       if(previousLayer && layerPrefix(previousLayer.id) == layerPrefix(layer.id)) {
-        const lastGroup = groups[groups.length - 1]
-        lastGroup.push(layer)
+        if (groups.length === 0) {
+          groups.push([layer])
+        } else {
+          groups[groups.length - 1].push(layer)
+        }
       } else {
         groups.push([layer])
       }
@@ -120,6 +123,7 @@ class LayerListContainer extends React.Component {
     this.setState({
       collapsedGroups: newGroups
     })
+    console.log(newGroups)
   }
 
   isCollapsed(groupPrefix, idx) {
@@ -175,13 +179,13 @@ class LayerListContainer extends React.Component {
           onLayersChange={this.props.onLayersChange}
       />
       <header className="maputnik-layer-list-header">
-        <span className="maputnik-layer-list-header-title">Layers</span>
+        <span className="maputnik-layer-list-header-title">图层管理</span>
         <span className="maputnik-space" />
         <Button
           onClick={this.toggleModal.bind(this, 'add')}
           className="maputnik-add-layer">
-      Add Layer
-      </Button>
+          添加图层
+        </Button>
       </header>
       <ul className="maputnik-layer-list-container">
         {listItems}

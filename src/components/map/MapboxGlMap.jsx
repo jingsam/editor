@@ -11,7 +11,7 @@ import colors from 'mapbox-gl-inspect/lib/colors'
 import Color from 'color'
 import { colorHighlightedLayer } from '../../libs/highlight'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import '../../mapboxgl.css'
+// import '../../mapboxgl.css'
 import '../../libs/mapbox-rtl'
 
 function renderLayerPopup(features) {

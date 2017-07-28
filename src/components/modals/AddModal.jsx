@@ -70,7 +70,7 @@ class AddModal extends React.Component {
     return <Modal
       isOpen={this.props.isOpen}
       onOpenToggle={this.props.onOpenToggle}
-      title={'Add Layer'}
+      title={'添加图层'}
     >
       <div className="maputnik-add-layer">
       <LayerIdBlock
@@ -96,7 +96,7 @@ class AddModal extends React.Component {
       />
       }
       <Button className="maputnik-add-layer-button" onClick={this.addLayer.bind(this)}>
-        Add Layer
+        添加
       </Button>
       </div>
     </Modal>

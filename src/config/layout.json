@@ -2,7 +2,7 @@
     "line": {
       "groups": [
         {
-          "title": "Paint properties",
+          "title": "渲染属性",
           "type": "properties",
           "fields": [
             "line-opacity",
@@ -18,7 +18,7 @@
           ]
         },
         {
-          "title": "Layout properties",
+          "title": "布局属性",
           "type": "properties",
           "fields": [
             "line-cap",
@@ -32,7 +32,7 @@
     "background": {
       "groups": [
         {
-          "title": "Paint properties",
+          "title": "渲染属性",
           "type": "properties",
           "fields": [
             "background-color",
@@ -45,7 +45,7 @@
     "fill": {
       "groups": [
         {
-          "title": "Paint properties",
+          "title": "渲染属性",
           "type": "properties",
           "fields": [
             "fill-opacity",
@@ -62,7 +62,7 @@
     "fill-extrusion": {
       "groups": [
         {
-          "title": "Paint properties",
+          "title": "渲染属性",
           "type": "properties",
           "fields": [
             "fill-extrusion-opacity",
@@ -79,7 +79,7 @@
     "circle": {
       "groups": [
         {
-          "title": "Paint properties",
+          "title": "渲染属性",
           "type": "properties",
           "fields": [
             "circle-color",
@@ -99,7 +99,7 @@
     "symbol": {
       "groups": [
         {
-          "title": "General layout properties",
+          "title": "布局属性",
           "type": "properties",
           "fields": [
             "symbol-placement",
@@ -108,7 +108,7 @@
           ]
         },
         {
-          "title": "Text layout properties",
+          "title": "文本布局",
           "type": "properties",
           "fields": [
             "text-field",
@@ -133,7 +133,7 @@
           ]
         },
         {
-          "title": "Icon layout properties",
+          "title": "图标布局",
           "type": "properties",
           "fields": [
             "icon-allow-overlap",
@@ -147,11 +147,11 @@
             "icon-rotate",
             "icon-padding",
             "icon-keep-upright",
-            "icon-offset" 
+            "icon-offset"
           ]
         },
         {
-          "title": "Text paint properties",
+          "title": "文本渲染属性",
           "type": "properties",
           "fields": [
             "text-color",
@@ -164,7 +164,7 @@
           ]
         },
         {
-          "title": "Icon paint properties",
+          "title": "图标渲染属性",
           "type": "properties",
           "fields": [
             "icon-color",
@@ -181,7 +181,7 @@
     "raster": {
       "groups": [
         {
-          "title": "Paint properties",
+          "title": "渲染属性",
           "type": "properties",
           "fields": [
             "raster-opacity",

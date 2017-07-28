@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GlSpec from 'mapbox-gl-style-spec/reference/latest.js'
+import GlSpec from '../../config/v8.json'
 import InputBlock from '../inputs/InputBlock'
 import SelectInput from '../inputs/SelectInput'
 
@@ -11,16 +11,16 @@ class LayerTypeBlock extends React.Component {
   }
 
   render() {
-    return <InputBlock label={"Type"} doc={GlSpec.layer.type.doc}>
+    return <InputBlock label={"图层类型"} doc={GlSpec.layer.type.doc}>
       <SelectInput
         options={[
-          ['background', 'Background'],
-          ['fill', 'Fill'],
-          ['line', 'Line'],
-          ['symbol', 'Symbol'],
-          ['raster', 'Raster'],
-          ['circle', 'Circle'],
-          ['fill-extrusion', 'Fill Extrusion'],
+          ['background', '背景'],
+          ['fill', '填充'],
+          ['line', '线'],
+          ['symbol', '符号'],
+          ['raster', '栅格'],
+          ['circle', '圆'],
+          ['fill-extrusion', '3D'],
         ]}
         onChange={this.props.onChange}
         value={this.props.value}

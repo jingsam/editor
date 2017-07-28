@@ -2,7 +2,6 @@ import React from 'react'
 import Mousetrap from 'mousetrap'
 
 import MapboxGlMap from './map/MapboxGlMap'
-import OpenLayers3Map from './map/OpenLayers3Map'
 import LayerList from './layers/LayerList'
 import LayerEditor from './layers/LayerEditor'
 import Toolbar from './Toolbar'
@@ -10,7 +9,7 @@ import AppLayout from './AppLayout'
 import MessagePanel from './MessagePanel'
 
 import { downloadGlyphsMetadata, downloadSpriteMetadata } from '../libs/metadata'
-import GlSpec from 'mapbox-gl-style-spec/reference/latest.js'
+import GlSpec from '../config/v8.json'
 import validateStyleMin from 'mapbox-gl-style-spec/lib/validate_style.min'
 import formatStyle from 'mapbox-gl-style-spec/lib/format'
 import style from '../libs/style.js'
@@ -193,16 +192,10 @@ export default class App extends React.Component {
     }
 
     const metadata = this.state.mapStyle.metadata || {}
-    const renderer = metadata['maputnik:renderer'] || 'mbgljs'
 
-    // Check if OL3 code has been loaded?
-    if(renderer === 'ol3') {
-      return <OpenLayers3Map {...mapProps} />
-    } else {
-      return  <MapboxGlMap {...mapProps}
+    return  <MapboxGlMap {...mapProps}
         inspectModeEnabled={this.state.inspectModeEnabled}
         highlightedLayer={this.state.mapStyle.layers[this.state.selectedLayerIndex]} />
-    }
   }
 
   onLayerSelect(layerId) {

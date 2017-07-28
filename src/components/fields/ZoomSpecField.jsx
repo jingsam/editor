@@ -12,6 +12,7 @@ import DeleteIcon from 'react-icons/lib/md/delete'
 import FunctionIcon from 'react-icons/lib/md/functions'
 
 import capitalize from 'lodash.capitalize'
+import config from '../../config/style_form_configuration.json'
 
 function isZoomField(value) {
   return typeof value === 'object' && value.stops
@@ -123,7 +124,7 @@ export default class ZoomSpecProperty  extends React.Component {
         className="maputnik-add-stop"
         onClick={this.addStop.bind(this)}
       >
-        Add stop
+        添加断点
       </Button>
     </div>
   }
@@ -176,6 +177,5 @@ function DeleteStopButton(props) {
 }
 
 function labelFromFieldName(fieldName) {
-  let label = fieldName.split('-').slice(1).join(' ')
-  return capitalize(label)
+  return (config.properties[fieldName] && config.properties[fieldName].label) || fieldName
 }

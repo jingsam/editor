@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GlSpec from 'mapbox-gl-style-spec/reference/latest.js'
+import GlSpec from '../../config/v8.json'
 import InputBlock from '../inputs/InputBlock'
 import NumberInput from '../inputs/NumberInput'
 
@@ -11,7 +11,7 @@ class MaxZoomBlock extends React.Component {
   }
 
   render() {
-    return <InputBlock label={"Max Zoom"} doc={GlSpec.layer.maxzoom.doc}>
+    return <InputBlock label={"最大缩放级别"} doc={GlSpec.layer.maxzoom.doc}>
       <NumberInput
         value={this.props.value}
         onChange={this.props.onChange}

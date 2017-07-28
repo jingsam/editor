@@ -1,5 +1,5 @@
 import React from 'react'
-import GlSpec from 'mapbox-gl-style-spec/reference/latest.js'
+import GlSpec from '../../config/v8.json'
 import Modal from './Modal'
 import Button from '../Button'
 import InputBlock from '../inputs/InputBlock'
@@ -9,7 +9,6 @@ import SourceTypeEditor from '../sources/SourceTypeEditor'
 
 import style from '../../libs/style'
 import { deleteSource, addSource, changeSource } from '../../libs/source'
-import publicSources from '../../config/tilesets.json'
 
 import AddIcon from 'react-icons/lib/md/add-circle-outline'
 import DeleteIcon from 'react-icons/lib/md/delete'
@@ -132,13 +131,13 @@ class AddSource extends React.Component {
 
   render() {
     return <div className="maputnik-add-source">
-      <InputBlock label={"Source ID"} doc={"Unique ID that identifies the source and is used in the layer to reference the source."}>
+      <InputBlock label={"数据源ID"}>
         <StringInput
           value={this.state.sourceId}
           onChange={v => this.setState({ sourceId: v})}
         />
       </InputBlock>
-      <InputBlock label={"Source Type"} doc={GlSpec.source_tile.type.doc}>
+      <InputBlock label={"数据源类型"} doc={GlSpec.source_tile.type.doc}>
         <SelectInput
           options={[
             ['geojson', 'GeoJSON'],
@@ -159,7 +158,7 @@ class AddSource extends React.Component {
       <Button
         className="maputnik-add-source-button"
 				onClick={() => this.props.onAdd(this.state.sourceId, this.state.source)}>
-        Add Source
+        添加
       </Button>
     </div>
   }
@@ -192,41 +191,19 @@ class SourcesModal extends React.Component {
       />
     })
 
-    const tilesetOptions = Object.keys(publicSources).filter(sourceId => !(sourceId in mapStyle.sources)).map(sourceId => {
-      const source = publicSources[sourceId]
-      return <PublicSource
-        key={sourceId}
-        id={sourceId}
-        type={source.type}
-        title={source.title}
-        onSelect={() => this.props.onStyleChanged(addSource(mapStyle, sourceId, this.stripTitle(source)))}
-      />
-    })
-
     const inputProps = { }
     return <Modal
       isOpen={this.props.isOpen}
       onOpenToggle={this.props.onOpenToggle}
-      title={'Sources'}
+      title={'数据源'}
     >
       <div className="maputnik-modal-section">
-        <h4>Active Sources</h4>
+        <h4>已有数据源</h4>
         {activeSources}
       </div>
 
       <div className="maputnik-modal-section">
-        <h4>Choose Public Source</h4>
-        <p>
-          Add one of the publicly availble sources to your style.
-        </p>
-        <div style={{maxwidth: 500}}>
-        {tilesetOptions}
-        </div>
-      </div>
-
-      <div className="maputnik-modal-section">
-				<h4>Add New Source</h4>
-				<p>Add a new source to your style. You can only choose the source type and id at creation time!</p>
+				<h4>添加数据源</h4>
 				<AddSource
 					onAdd={(sourceId, source) => this.props.onStyleChanged(addSource(mapStyle, sourceId, source))}
 				/>

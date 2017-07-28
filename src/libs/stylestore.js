@@ -75,12 +75,12 @@ export class StyleStore {
 
   // Find the last edited style
   latestStyle(cb) {
-    if(this.mapStyles.length === 0) return loadDefaultStyle(cb)
+    if(this.mapStyles.length === 0) return cb(style.emptyStyle)
     const styleId = window.localStorage.getItem(storageKeys.latest)
     const styleItem = window.localStorage.getItem(styleKey(styleId))
 
     if(styleItem) return cb(JSON.parse(styleItem))
-    loadDefaultStyle(cb)
+    cb(style.emptyStyle)
   }
 
   // Save current style replacing previous version

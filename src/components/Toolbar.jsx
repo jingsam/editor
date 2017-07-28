@@ -16,7 +16,6 @@ import MdFontDownload from 'react-icons/lib/md/font-download'
 import HelpIcon from 'react-icons/lib/md/help-outline'
 import InspectionIcon from 'react-icons/lib/md/find-in-page'
 
-import logoImage from '../img/maputnik.png'
 import SettingsModal from './modals/SettingsModal'
 import ExportModal from './modals/ExportModal'
 import SourcesModal from './modals/SourcesModal'
@@ -96,6 +95,7 @@ export default class Toolbar extends React.Component {
         onOpenToggle={this.toggleModal.bind(this, 'export')}
       />
       <OpenModal
+        mapStyle={this.props.mapStyle}
         isOpen={this.state.isOpen.open}
         onStyleOpen={this.props.onStyleOpen}
         onOpenToggle={this.toggleModal.bind(this, 'open')}
@@ -106,40 +106,29 @@ export default class Toolbar extends React.Component {
           isOpen={this.state.isOpen.sources}
           onOpenToggle={this.toggleModal.bind(this, 'sources')}
       />
-      <ToolbarLink
-        href={"https://github.com/maputnik/editor"}
-        className="maputnik-toolbar-logo"
-      >
-        <img src={logoImage} alt="Maputnik" />
-        <h1>Maputnik</h1>
-      </ToolbarLink>
       <ToolbarAction onClick={this.toggleModal.bind(this, 'open')}>
         <OpenIcon />
-        <IconText>Open</IconText>
+        <IconText>打开</IconText>
       </ToolbarAction>
       <ToolbarAction onClick={this.toggleModal.bind(this, 'export')}>
         <MdFileDownload />
-        <IconText>Export</IconText>
+        <IconText>导出</IconText>
       </ToolbarAction>
       <ToolbarAction onClick={this.toggleModal.bind(this, 'sources')}>
         <SourcesIcon />
-        <IconText>Sources</IconText>
+        <IconText>数据源</IconText>
       </ToolbarAction>
       <ToolbarAction onClick={this.toggleModal.bind(this, 'settings')}>
         <SettingsIcon />
-        <IconText>Style Settings</IconText>
+        <IconText>设置</IconText>
       </ToolbarAction>
       <ToolbarAction onClick={this.props.onInspectModeToggle}>
         <InspectionIcon />
         <IconText>
-          { this.props.inspectModeEnabled && <span>Map Mode</span> }
-          { !this.props.inspectModeEnabled && <span>Inspect Mode</span> }
+          { this.props.inspectModeEnabled && <span>地图视图</span> }
+          { !this.props.inspectModeEnabled && <span>数据视图</span> }
         </IconText>
       </ToolbarAction>
-      <ToolbarLink href={"https://github.com/maputnik/editor/wiki"}>
-        <HelpIcon />
-        <IconText>Help</IconText>
-      </ToolbarLink>
     </div>
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GlSpec from 'mapbox-gl-style-spec/reference/latest.js'
+import GlSpec from '../../config/v8.json'
 import InputBlock from '../inputs/InputBlock'
 import NumberInput from '../inputs/NumberInput'
 
@@ -11,7 +11,7 @@ class MinZoomBlock extends React.Component {
   }
 
   render() {
-    return <InputBlock label={"Min Zoom"} doc={GlSpec.layer.minzoom.doc}>
+    return <InputBlock label={"最小缩放级别"} doc={GlSpec.layer.minzoom.doc}>
       <NumberInput
         value={this.props.value}
         onChange={this.props.onChange}

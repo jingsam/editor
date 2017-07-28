@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GlSpec from 'mapbox-gl-style-spec/reference/latest.js'
+import GlSpec from '../../config/v8.json'
 import InputBlock from '../inputs/InputBlock'
 import StringInput from '../inputs/StringInput'
 import SelectInput from '../inputs/SelectInput'
@@ -46,54 +46,43 @@ class SettingsModal extends React.Component {
       title={'Style Settings'}
     >
       <div style={{minWidth: 350}}>
-      <InputBlock label={"Name"} doc={GlSpec.$root.name.doc}>
+      <InputBlock label={"名称"} doc={GlSpec.$root.name.doc}>
         <StringInput {...inputProps}
           value={this.props.mapStyle.name}
           onChange={this.changeStyleProperty.bind(this, "name")}
         />
       </InputBlock>
-      <InputBlock label={"Owner"} doc={"Owner ID of the style. Used by Mapbox or future style APIs."}>
+      <InputBlock label={"作者"}>
         <StringInput {...inputProps}
           value={this.props.mapStyle.owner}
           onChange={this.changeStyleProperty.bind(this, "owner")}
         />
       </InputBlock>
-      <InputBlock label={"Sprite URL"} doc={GlSpec.$root.sprite.doc}>
+      <InputBlock label={"符号库"} doc={GlSpec.$root.sprite.doc}>
         <StringInput {...inputProps}
           value={this.props.mapStyle.sprite}
           onChange={this.changeStyleProperty.bind(this, "sprite")}
         />
       </InputBlock>
 
-      <InputBlock label={"Glyphs URL"} doc={GlSpec.$root.glyphs.doc}>
+      <InputBlock label={"字体库"} doc={GlSpec.$root.glyphs.doc}>
         <StringInput {...inputProps}
           value={this.props.mapStyle.glyphs}
           onChange={this.changeStyleProperty.bind(this, "glyphs")}
         />
       </InputBlock>
 
-      <InputBlock label={"Mapbox Access Token"} doc={"Public access token for Mapbox services."}>
+      <InputBlock label={"Mapbox Access Token"} doc={"用于访问Mapbox的瓦片服务。"}>
         <StringInput {...inputProps}
           value={metadata['maputnik:mapbox_access_token']}
           onChange={this.changeMetadataProperty.bind(this, "maputnik:mapbox_access_token")}
         />
       </InputBlock>
 
-      <InputBlock label={"OpenMapTiles Access Token"} doc={"Public access token for the OpenMapTiles CDN."}>
+      <InputBlock label={"OpenMapTiles Access Token"} doc={"用于访问OpenMapTiles的瓦片服务。"}>
         <StringInput {...inputProps}
           value={metadata['maputnik:openmaptiles_access_token']}
           onChange={this.changeMetadataProperty.bind(this, "maputnik:openmaptiles_access_token")}
-        />
-      </InputBlock>
-
-      <InputBlock label={"Style Renderer"} doc={"Choose the default Maputnik renderer for this style."}>
-        <SelectInput {...inputProps}
-          options={[
-            ['mbgljs', 'MapboxGL JS'],
-            ['ol3', 'Open Layers 3'],
-          ]}
-          value={metadata['maputnik:renderer'] || 'mbgljs'}
-          onChange={this.changeMetadataProperty.bind(this, 'maputnik:renderer')}
         />
       </InputBlock>
       </div>

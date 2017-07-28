@@ -1,6 +1,5 @@
 import React from 'react'
 
-import JSONEditor from './JSONEditor'
 import FilterEditor from '../filter/FilterEditor'
 import PropertyGroup from '../fields/PropertyGroup'
 import LayerEditorGroup from './LayerEditorGroup'
@@ -8,7 +7,6 @@ import LayerTypeBlock from './LayerTypeBlock'
 import LayerIdBlock from './LayerIdBlock'
 import MinZoomBlock from './MinZoomBlock'
 import MaxZoomBlock from './MaxZoomBlock'
-import CommentBlock from './CommentBlock'
 import LayerSourceBlock from './LayerSourceBlock'
 import LayerSourceLayerBlock from './LayerSourceLayerBlock'
 
@@ -26,18 +24,14 @@ class UnsupportedLayer extends React.Component {
 
 function layoutGroups(layerType) {
   const layerGroup = {
-    title: 'Layer',
+    title: '图层属性',
     type: 'layer'
   }
   const filterGroup = {
-    title: 'Filter',
+    title: '过滤条件',
     type: 'filter'
   }
-  const editorGroup = {
-    title: 'JSON Editor',
-    type: 'jsoneditor'
-  }
-    return [layerGroup, filterGroup].concat(layout[layerType].groups).concat([editorGroup])
+  return [layerGroup, filterGroup].concat(layout[layerType].groups)
 }
 
 /** Layer editor supporting multiple types of layers. */
@@ -111,11 +105,6 @@ export default class LayerEditor extends React.Component {
   }
 
   renderGroupType(type, fields) {
-    let comment = ""
-    if(this.props.layer.metadata) {
-      comment = this.props.layer.metadata['maputnik:comment']
-    }
-
     switch(type) {
       case 'layer': return <div>
         <LayerIdBlock
@@ -146,10 +135,6 @@ export default class LayerEditor extends React.Component {
           value={this.props.layer.maxzoom}
           onChange={v => this.changeProperty(null, 'maxzoom', v)}
         />
-        <CommentBlock
-          value={comment}
-          onChange={v => this.changeProperty('metadata', 'maputnik:comment', v == ""  ? undefined : v)}
-        />
       </div>
       case 'filter': return <div>
         <div className="maputnik-filter-editor-wrapper">
@@ -165,10 +150,6 @@ export default class LayerEditor extends React.Component {
         groupFields={fields}
         spec={this.props.spec}
         onChange={this.changeProperty.bind(this)}
-      />
-      case 'jsoneditor': return <JSONEditor
-        layer={this.props.layer}
-        onChange={this.props.onLayerChanged}
       />
       default: return null
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { combiningFilterOps } from '../../libs/filterops.js'
 
-import GlSpec from 'mapbox-gl-style-spec/reference/latest.js'
+import GlSpec from '../../config/v8.json'
 import DocLabel from '../fields/DocLabel'
 import SelectInput from '../inputs/SelectInput'
 import SingleFilterEditor from './SingleFilterEditor'
@@ -90,13 +90,13 @@ export default class CombiningFilterEditor extends React.Component {
     return <div className="maputnik-filter-editor">
       <div className="maputnik-filter-editor-compound-select">
         <DocLabel
-          label={"Compound Filter"}
-          doc={GlSpec.layer.filter.doc + " Combine multiple filters together by using a compound filter."}
+          label={"复合过滤条件"}
+          doc={GlSpec.layer.filter.doc}
         />
         <SelectInput
           value={combiningOp}
           onChange={this.onFilterPartChanged.bind(this, 0)}
-          options={[["all", "every filter matches"], ["none", "no filter matches"], ["any", "any filter matches"]]}
+          options={[["all", "AND"], ["none", "NOT"], ["any", "OR"]]}
         />
       </div>
       {editorBlocks}
@@ -104,7 +104,7 @@ export default class CombiningFilterEditor extends React.Component {
         <Button
           className="maputnik-add-filter"
           onClick={this.addFilterItem.bind(this)}>
-          Add filter
+          添加过滤条件
         </Button>
       </div>
     </div>

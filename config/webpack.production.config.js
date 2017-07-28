@@ -76,7 +76,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/template.html',
-      title: 'Maputnik'
+      title: '知行在线配图'
     }),
     new webpack.optimize.DedupePlugin()
   ]

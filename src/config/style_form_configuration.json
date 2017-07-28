@@ -1,0 +1,645 @@
+{
+  "properties": {
+    "circle-radius": {
+      "label": "半径",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "circle-color": {
+      "label": "颜色"
+    },
+    "circle-blur": {
+      "label": "虚化",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "circle-opacity": {
+      "label": "不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "circle-stroke-color": {
+      "label": "描边颜色"
+    },
+    "circle-stroke-width": {
+      "label": "描边宽度",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "circle-stroke-opacity": {
+      "label": "描边不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "circle-translate": {
+      "label": "偏移",
+      "itemLabels": ["x", "y"],
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "circle-translate-anchor": {
+      "label": "偏移的锚点"
+    },
+    "circle-pitch-scale": {
+      "label": "倾斜的锚点"
+    },
+    "fill-color": {
+      "label": "颜色"
+    },
+    "fill-pattern": {
+      "label": "纹理",
+      "valueType": "image"
+    },
+    "fill-opacity": {
+      "label": "不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "fill-antialias": {
+      "label": "反锯齿"
+    },
+    "fill-outline-color": {
+      "label": "1像素描边颜色"
+    },
+    "fill-translate": {
+      "label": "偏移",
+      "itemLabels": ["x", "y"],
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "fill-translate-anchor": {
+      "label": "偏移的锚点"
+    },
+    "fill-extrusion-opacity": {
+      "label": "不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "fill-extrusion-color": {
+      "label": "颜色"
+    },
+    "fill-extrusion-translate": {
+      "label": "偏移",
+      "itemLabels": ["x", "y"],
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "fill-extrusion-translate-anchor": {
+      "label": "偏移的锚点"
+    },
+    "fill-extrusion-pattern": {
+      "label": "纹理",
+      "valueType": "image"
+    },
+    "fill-extrusion-height": {
+      "label": "高度",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "fill-extrusion-base": {
+      "label": "基底高度",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "line-color": {
+      "label": "颜色"
+    },
+    "line-pattern": {
+      "label": "纹理",
+      "valueType": "image"
+    },
+    "line-opacity": {
+      "label": "不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "line-width": {
+      "label": "线宽",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "line-cap": {
+      "label": "节点形状"
+    },
+    "line-join": {
+      "label": "交点形状"
+    },
+    "line-round-limit": {
+      "label": "圆交点阈值",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "line-miter-limit": {
+      "label": "直角交点阈值",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "line-dasharray": {
+      "valueType": "dashArray",
+      "label": "虚线",
+      "repeatingItemLabels": ["dash", "gap"],
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "line-gap-width": {
+      "label": "间隔宽度",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "line-blur": {
+      "label": "虚化",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "line-offset": {
+      "label": "向两侧偏移",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "line-translate": {
+      "label": "偏移",
+      "itemLabels": ["x", "y"],
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "line-translate-anchor": {
+      "label": "偏移的锚点"
+    },
+    "text-field": {
+      "label": "文本字段"
+    },
+    "text-color": {
+      "label": "颜色"
+    },
+    "text-opacity": {
+      "label": "不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "text-font": {
+      "label": "字体",
+      "valueType": "font"
+    },
+    "text-size": {
+      "label": "大小",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "text-letter-spacing": {
+      "label": "字符间距",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "text-line-height": {
+      "label": "行高",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "text-max-width": {
+      "label": "最大宽度",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "text-transform": {
+      "label": "变换"
+    },
+    "text-halo-color": {
+      "label": "光晕颜色"
+    },
+    "text-halo-width": {
+      "label": "光晕宽度",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "text-halo-blur": {
+      "label": "光晕虚化",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "icon-image": {
+      "label": "符号",
+      "valueType": "image"
+    },
+    "icon-opacity": {
+      "label": "不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "icon-size": {
+      "label": "大小",
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "text-justify": {
+      "label": "文本对齐"
+    },
+    "text-anchor": {
+      "label": "文本锚点",
+      "valueType": "anchor",
+      "valueOrder": ["bottom-right", "bottom", "bottom-left", "right", "center", "left", "top-right", "top", "top-left"]
+    },
+    "text-offset": {
+      "label": "相对锚点偏移",
+      "itemLabels": ["x", "y"],
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "text-translate": {
+      "label": "相对原本位置偏移",
+      "itemLabels": ["x", "y"],
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "text-translate-anchor": {
+      "label": "文本偏移相对于"
+    },
+    "text-rotate": {
+      "label": "文本旋转",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "text-pitch-alignment": {
+      "label": "文本倾斜相对于"
+    },
+    "icon-offset": {
+      "label": "相对锚点偏移",
+      "itemLabels": ["x", "y"],
+      "formProperties": {
+        "step": 0.1
+      }
+    },
+    "icon-translate": {
+      "label": "相对原本位置偏移",
+      "itemLabels": ["x", "y"],
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "icon-translate-anchor": {
+      "label": "符号偏移相对于"
+    },
+    "icon-rotate": {
+      "label": "符号倾斜相对于",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "symbol-placement": {
+      "label": "定位类型"
+    },
+    "symbol-spacing": {
+      "label": "间距",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "text-max-angle": {
+      "label": "文本的最大转角",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "symbol-avoid-edges": {
+      "label": "避免边缘注记"
+    },
+    "text-rotation-alignment": {
+      "label": "文本旋转"
+    },
+    "text-keep-upright": {
+      "label": "保持文本朝上"
+    },
+    "icon-rotation-alignment": {
+      "label": "符号旋转"
+    },
+    "icon-keep-upright": {
+      "label": "保持符号朝上"
+    },
+    "text-padding": {
+      "label": "文本框外扩间距",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "text-allow-overlap": {
+      "label": "允许文本重叠"
+    },
+    "text-ignore-placement": {
+      "label": "忽略文本定位"
+    },
+    "text-optional": {
+      "label": "文本是否可以不显示"
+    },
+    "icon-padding": {
+      "label": "符号框外扩间距",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "icon-allow-overlap": {
+      "label": "允许符号重叠"
+    },
+    "icon-ignore-placement": {
+      "label": "忽略符号重叠"
+    },
+    "icon-optional": {
+      "label": "符号是否可以不显示"
+    },
+    "background-color": {
+      "label": "颜色"
+    },
+    "background-pattern": {
+      "label": "纹理",
+      "valueType": "image"
+    },
+    "background-opacity": {
+      "label": "不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "raster-opacity": {
+      "label": "不透明度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "raster-fade-duration": {
+      "label": "渐隐时长",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "raster-hue-rotate": {
+      "label": "Hue变换",
+      "formProperties": {
+        "step": 1
+      }
+    },
+    "raster-saturation": {
+      "label": "饱和度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "raster-contrast": {
+      "label": "对比度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "raster-brightness-min": {
+      "label": "最小亮度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "raster-brightness-max": {
+      "label": "最大亮度",
+      "formProperties": {
+        "step": 0.01
+      }
+    },
+    "light-anchor": {
+      "label": "锚点",
+      "docProperties": {
+        "hidePropertyId": true
+      },
+      "formProperties": {
+        "hidePickExistingValue": true
+      }
+    },
+    "light-position": {
+      "label": "位置",
+      "itemLabels": ["radial", "azimuthal", "polar"],
+      "docProperties": {
+        "hidePropertyId": true
+      },
+      "formProperties": {
+        "hidePickExistingValue": true
+      }
+    },
+    "light-color": {
+      "label": "颜色",
+      "docProperties": {
+        "hidePropertyId": true
+      },
+      "formProperties": {
+        "hidePickExistingValue": true
+      }
+    },
+    "light-intensity": {
+      "label": "强度",
+      "docProperties": {
+        "hidePropertyId": true
+      },
+      "formProperties": {
+        "hidePickExistingValue": true,
+        "step": 0.01
+      }
+    }
+  },
+  "layerTypes": {
+    "circle": {
+      "groups": [{
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["circle-radius", "circle-color", "circle-blur", "circle-opacity", "circle-stroke-color", "circle-stroke-width", "circle-stroke-opacity", "circle-translate", "circle-translate-anchor", "circle-pitch-scale"]
+        }]
+      }]
+    },
+    "fill": {
+      "groups": [{
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["fill-color", "fill-pattern", "fill-opacity", "fill-antialias", "fill-outline-color", "fill-translate", "fill-translate-anchor"]
+        }]
+      }]
+    },
+    "fill-extrusion": {
+      "groups": [{
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["fill-extrusion-height", "fill-extrusion-base", "fill-extrusion-color", "fill-extrusion-pattern", "fill-extrusion-opacity", "fill-extrusion-translate", "fill-extrusion-translate-anchor"]
+        }]
+      }]
+    },
+    "line": {
+      "groups": [{
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["line-color", "line-pattern", "line-opacity", "line-width", "line-cap", "line-join", "line-round-limit", "line-miter-limit"]
+        }, {
+          "title": "其他选项",
+          "properties": ["line-dasharray", "line-gap-width", "line-blur", "line-offset", "line-translate", "line-translate-anchor"]
+        }]
+      }]
+    },
+    "symbol": {
+      "groups": [{
+        "title": "注记文本",
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["text-field", "text-color", "text-opacity", "text-font", "text-size", "text-letter-spacing", "text-line-height", "text-max-width", "text-transform"]
+        }, {
+          "title": "光晕设置",
+          "properties": ["text-halo-color", "text-halo-width", "text-halo-blur"]
+        }]
+      }, {
+        "title": "注记符号",
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["icon-image", "icon-opacity", "icon-size"]
+        }]
+      }, {
+        "title": "注记位置",
+        "sections": [{
+          "title": "注记文本位置",
+          "properties": ["text-justify", "text-anchor", "text-offset", "text-translate", "text-translate-anchor", "text-rotate", "text-pitch-alignment"]
+        }, {
+          "title": "注记符号位置",
+          "properties": ["icon-offset", "icon-translate", "icon-translate-anchor", "icon-rotate"]
+        }]
+      }, {
+        "title": "注记定位",
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["symbol-placement", "symbol-spacing", "text-max-angle", "symbol-avoid-edges"]
+        }, {
+          "title": "注记旋转设置",
+          "properties": ["text-rotation-alignment", "text-keep-upright", "icon-rotation-alignment", "icon-keep-upright"]
+        }, {
+          "title": "注记重叠设置",
+          "properties": ["text-padding", "text-allow-overlap", "text-ignore-placement", "text-optional", "icon-padding", "icon-allow-overlap", "icon-ignore-placement", "icon-optional"]
+        }]
+      }]
+    },
+    "background": {
+      "groups": [{
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["background-color", "background-pattern", "background-opacity"]
+        }]
+      }]
+    },
+    "raster": {
+      "groups": [{
+        "sections": [{
+          "title": "基本设置",
+          "properties": ["raster-opacity", "raster-fade-duration", "raster-hue-rotate", "raster-saturation", "raster-contrast", "raster-brightness-min", "raster-brightness-max"]
+        }]
+      }]
+    }
+  },
+  "unitsDisplays": {
+    "pixels": "px",
+    "degrees": "deg",
+    "milliseconds": "ms",
+    "ems": "em",
+    "em": "em",
+    "line widths": ""
+  },
+  "propertyValueIcons": {
+    "justify-left": "text-justify-left",
+    "justify-right": "text-justify-right",
+    "justify-center": "text-justify-center",
+    "join-miter": "join-miter",
+    "join-round": "join-round",
+    "join-bevel": "join-bevel",
+    "cap-butt": "cap-butt",
+    "cap-round": "cap-round",
+    "cap-square": "cap-square",
+    "transform-lowercase": "transform-lowercase",
+    "transform-uppercase": "transform-uppercase",
+    "transform-none": "font",
+    "placement-point": "point",
+    "placement-line": "line",
+    "translate-anchor-map": "globe",
+    "translate-anchor-viewport": "viewport",
+    "translate-anchor-auto": "refresh",
+    "pitch-alignment-map": "globe",
+    "pitch-alignment-viewport": "viewport",
+    "pitch-alignment-auto": "refresh",
+    "pitch-scale-viewport": "viewport",
+    "pitch-scale-map": "globe",
+    "rotation-alignment-map": "globe",
+    "rotation-alignment-viewport": "viewport",
+    "rotation-alignment-auto": "refresh",
+    "anchor-top-left": "text-align-top-left",
+    "anchor-top": "text-align-top-center",
+    "anchor-top-right": "text-align-top-right",
+    "anchor-left": "text-align-center-left",
+    "anchor-center": "text-align-center-center",
+    "anchor-right": "text-align-center-right",
+    "anchor-bottom-left": "text-align-bottom-left",
+    "anchor-bottom": "text-align-bottom-center",
+    "anchor-bottom-right": "text-align-bottom-right",
+    "anchor-map": "globe",
+    "anchor-viewport": "viewport",
+    "anchor-auto": "refresh"
+  },
+  "propertyGroups": {
+    "color": {
+      "propertyValueTypes": ["color"],
+      "title": "颜色",
+      "icon": "palette"
+    },
+    "string": {
+      "propertyValueTypes": ["string"],
+      "title": "标注字段",
+      "icon": "quotes"
+    },
+    "image": {
+      "propertyValueTypes": ["image"],
+      "title": "符号",
+      "icon": "picture"
+    },
+    "font": {
+      "propertyValueTypes": ["font"],
+      "title": "字体",
+      "icon": "font"
+    },
+    "number": {
+      "propertyValueTypes": ["number", "array", "dashArray"],
+      "title": "数值",
+      "icon": "number"
+    },
+    "option": {
+      "propertyValueTypes": ["boolean", "enum", "anchor"],
+      "title": "选项",
+      "icon": "grid"
+    }
+  }
+}
