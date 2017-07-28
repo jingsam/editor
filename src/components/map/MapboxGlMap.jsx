@@ -11,7 +11,6 @@ import colors from 'mapbox-gl-inspect/lib/colors'
 import Color from 'color'
 import { colorHighlightedLayer } from '../../libs/highlight'
 import 'mapbox-gl/dist/mapbox-gl.css'
-// import '../../mapboxgl.css'
 import '../../libs/mapbox-rtl'
 
 function renderLayerPopup(features) {
@@ -112,6 +111,11 @@ export default class MapboxGlMap extends React.Component {
 
     const nav = new MapboxGl.NavigationControl();
     map.addControl(nav, 'top-right');
+    map.addControl(new MapboxGl.FullscreenControl(), 'top-right');
+    map.addControl(new MapboxGl.ScaleControl({
+      maxWidth: 80,
+      unit: 'metric'
+    }), 'bottom-right');
 
     const inspect = new MapboxInspect({
       popup: new MapboxGl.Popup({
